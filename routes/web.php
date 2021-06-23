@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClassController;
 use App\Http\Controllers\ComponentsController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
@@ -28,6 +29,11 @@ Route::get('icons', [ComponentsController::class, 'icons']);
 
 // STUDENT
 Route::resource('students', StudentController::class);
+Route::get('students/{id}/hide', [StudentController::class, 'hide'])->name('students.hide');
+
+//CLASS
+Route::resource('class', ClassController::class);
+Route::get('class/{id}/hide', [ClassController::class, 'hide'])->name('class.hide');
 
 // Course
 Route::resource('course', CourseController::class);
