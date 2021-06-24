@@ -39,6 +39,7 @@ Route::get('class/{id}/hide', [ClassController::class, 'hide'])->name('class.hid
 // Course
 Route::resource('course', CourseController::class);
 
+
 Route::get('course/{id}/hide', [CourseController::class,'hide'])->name('course.hide');
 
 Route::get('course/passed',[CourseController::class,'passed'])->name('course.passed');
@@ -51,3 +52,6 @@ Route::get('major/{id}/hide', [majorController::class,'hide'])->name('major.hide
 Route::get('major/disabled',[majorController::class,'disabled'])->name('major.disabled');
 
 Route::get('major/{id}/showmajor',[majorController::class,'showMajor'])->name('major.showmajor');
+
+Route::get('course/{id}/hide', [CourseController::class, 'hide'])->name('course.hide');
+
